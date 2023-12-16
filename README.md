@@ -1,20 +1,33 @@
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- TOC placeholder -->
-<div id="table-of-contents"></div>
+<details>
+  <summary>Table of Contents</summary>
+
+## Contents
+
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Git Basics](#git-basics)
+- [HTML Foundations](#html-foundations)
+- [CSS Foundations](#css-foundations)
+- [Flexbox](#flexbox)
+- [JavaScript Basics](#javascript-basics)
+- [Conclusion](#conclusion)
+
+</details>
+
 # Odin-Project
 Notes and progress tracking for The Odin Project curriculum.
 
 ## Table of Contents
 ### Foundation
 #### Foundations Course
-- [ ] ##### 1. Introduction
+##### 1. Introduction <a name="introduction"></a>
   - [ ] 1.1 How This Course Will Work
   - [ ] 1.2 Introduction to Web Development
   - [ ] 1.3 Motivation and Mindset
   - [ ] 1.4 Asking For Help
   - [ ] 1.5 Join the Odin Community
    
-##### 2. Prerequisites
+##### 2. Prerequisites <a name="prerequisites"></a>
   - [ ] 2.1 Computer Basics
   - [ ] 2.2 How Does the Web Work?
   - [ ] 2.3 Installation Overview
@@ -23,7 +36,7 @@ Notes and progress tracking for The Odin Project curriculum.
   - [ ] 2.6 Command Line Basics
   - [ ] 2.7 Setting up Git
 
-##### 3. Git Basics
+##### 3. Git Basics <a name="git-basics"></a>
   - [ ] 3.1 Introduction to Git
   - [ ] 3.2 Git Basics
   
@@ -77,41 +90,4 @@ Notes and progress tracking for The Odin Project curriculum.
 #### React
 #### NodeJS
 #### Getting Hired
-<script>
-$(document).ready(function() {
-    // Find headings with the 'toc' class
-    var headings = $('h1, h2, h3, h4, h5, h6').filter('.toc');
-    
-    // Generate TOC HTML
-    var tocHtml = '<details><summary>Table of Contents</summary><ul>';
-    headings.each(function() {
-        var heading = $(this);
-        var level = parseInt(heading.prop('tagName').substr(1));
-        var text = heading.text();
-        var id = text.toLowerCase().replace(/\s+/g, '-');
-        heading.attr('id', id);
-        tocHtml += '<li><a href="#' + id + '">' + text + '</a></li>';
-    });
-    tocHtml += '</ul></details>';
-    
-    // Insert TOC into the placeholder
-    $('#table-of-contents').html(tocHtml);
-});
-</script>
-<style>
-details {
-    margin-bottom: 10px;
-}
-summary {
-    cursor: pointer;
-}
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-li {
-    margin-bottom: 5px;
-}
-</style>
-
 
